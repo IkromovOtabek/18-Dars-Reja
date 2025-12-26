@@ -358,11 +358,44 @@
 }
 
 .icon1{
-    position: relative;
-    left: 516.55px;
-    top: 15.26px;
-    right: 438.44px;
-    bottom: 388.26px;
+    position: absolute;
+    left: 516px;
+    bottom: 330px;
+}
+
+.icon2{
+    position: absolute;
+    left: 84px;
+    bottom: -40px;
+}
+
+.icon3{
+    position: absolute;
+    left: 554px;
+    bottom: 0px;
+}
+
+.icon4{
+    position: absolute;
+    left: 50px;
+    bottom: 355px;
+}
+.icon5{
+    position: absolute;
+    left: 892px;
+    bottom: 357px;
+}
+
+.icon6{
+    position: absolute;
+    left: 370px;
+    bottom: 55px;
+}
+
+.icon7{
+    position: absolute;
+    left: 917px;
+    bottom: -40px;
 }
 
 .lorem_text{
@@ -580,6 +613,10 @@
     width: 18px;
     height: 18px;
     margin: 0 auto;
+}
+
+.icons a {
+  position: relative;
 }
 
 /* Tooltip text (tepada) */
