@@ -79,6 +79,7 @@ const list =[
 //                 resolve(list[5]);
 //             }, 5000);
 //         });
+
 //         // setTimeout(function () {
 //         //     return list[5];
 //         // }, 5000);
