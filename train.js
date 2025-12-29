@@ -114,15 +114,40 @@ const list =[
 
 
 // MITTASK A
-function countLetter(letter, word) {
+
+// Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
+// MASALAN countLetter("e", "engineer") 3ni return qiladi.
+
+// function countLetter(letter, word) {
+//   let count = 0;
+
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+// console.log(countLetter("e", "engineer")); 
+
+// MITASK B
+
+// Shunday, function tuzingki, bu function yagona parametrga ega bo'lib
+// string tarkibidagi sonlar miqdorini qaytarsin
+
+// Masalan: countDigits("ad2a54y79wet0sfgb9")
+// Yuqoridagi string tarkibida 7 dona raqam qatnashganligi uchun, natija 7 qaytadi
+
+function raqamSoni(text){
   let count = 0;
 
-  for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) {
+  for(let i = 0; i < text.length; i++){
+    if(!isNaN(text[i]) && (text[i] !== " ")) {
       count++;
     }
   }
-
-  return count;
+  return count
 }
-console.log(countLetter("e", "engineer")); 
+
+console.log(raqamSoni("ad2a54y79wet0sfgb9"));

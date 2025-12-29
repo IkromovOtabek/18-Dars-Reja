@@ -3,11 +3,11 @@ const mongodb = require("mongodb");
 
 let db;
 const connectionString = "mongodb+srv://Owen:6NxAfaczdNYWPKNu@owen.wkad1hh.mongodb.net/Reja"
-// mongodb+srv://user:password@cluster.mongodb.net/database?appName=Reja //16:26dan davom et
 
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true,}, (err, client) => {
-    if(err) console.log("ERROR on connection MongoDB");
-    else{
+    if(err) {
+        console.log("ERROR on connection MongoDB");
+    }else{
         console.log("MngoDB connection succeed")
 
         module.exports = client;
@@ -20,4 +20,3 @@ mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: tr
     }
 });
 
-// mongodb+srv://Owen:6NxAfaczdNYWPKNu@owen.wkad1hh.mongodb.net/
