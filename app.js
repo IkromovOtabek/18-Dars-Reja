@@ -42,15 +42,18 @@ app.post("/create-item", (req, res) => {
     console.log(req.body);
     // res.end("success");
     const new_reja = req.body.reja;
+
     db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
-        if(err){
-            console.log(err);
-            res.end("something went wrong")
-        }else{
-            res.end('successfully added')
-        }
+        res.json(data.ops[0]);
+        // Traditional POST ga moslab yozilgan
+    //     if(err){
+    //         console.log(err);
+    //         res.end("something went wrong")
+    //     }else{
+    //         res.end('successfully added')
+    //     }
     });
-})
+});
 
 app.get("/", function(req, res) {
     console.log("user entered /")
@@ -59,7 +62,7 @@ app.get("/", function(req, res) {
             console.log(err);
             res.end("something went wrong");
         }else {
-            // console.log(data)
+            console.log(data)
             res.render("reja", { items: data });
         }
     });
