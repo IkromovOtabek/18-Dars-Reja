@@ -217,3 +217,26 @@ shop.qoldiq();
 shop.sotish("non", 3);
 shop.qabul("cola", 4);
 shop.qoldiq();
+
+// TASK D
+
+// Ikkita parametra ega function tuzing, va functioning
+// berilgan birinchi va ikkinchi parametr qiymatlari o'zaro to'liq
+// mos kelsa true qiymat qaytarsin
+
+// Masalan: checkContent("mitgroup", "gmtiprou");
+// Yuqoridagi misolda birinchi va ikkinchi parametr qiymatli bir xil
+// ya'ni bir xil harflar qatnashganligi uchun true qiymat qaytaradi.
+
+function checkContent(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  const sorted1 = str1.split('').sort().join('');
+  const sorted2 = str2.split('').sort().join('');
+
+  return sorted1 === sorted2;
+}
+
+console.log(checkContent("mitgroup", "gmtiprou"));
+console.log(checkContent("salom dunyo", "slmao uonyd"));
