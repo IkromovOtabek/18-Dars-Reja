@@ -17,9 +17,9 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 });
 
 // 1: Kirish code
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.static("public")); //Middleware DP > publicni ochiqlaydi
+app.use(express.json()); //Middleware DP > Rest API support
+app.use(express.urlencoded({extended: true}));  //Middleware DP > Traditional API support
 
 // 2: Session code
 
@@ -101,6 +101,6 @@ app.get('/author', (req, res) => {
 
 // express va ness eng  mashxur backend framework in Node.js
 
-// Frontendni 2xil usulda amalga oshiriladi: 1. Traditional - ejs framework foydalangan xolda BSSR - Backend Server Side Rendering - backendni ichida frontendi qurish 2. Single Page
+// Frontendni 2xil usulda amalga oshiriladi: BSSR va SSR
 
 module.exports = app;
