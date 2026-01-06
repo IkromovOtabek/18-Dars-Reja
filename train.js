@@ -241,7 +241,7 @@ function checkContent(str1, str2) {
 console.log(checkContent("mitgroup", "gmtiprou"));
 console.log(checkContent("salom dunyo", "slmao uonyd"));
 
-// TASK D
+// TASK E
 
 // Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 // MASALAN: getReverse("hello") return qilsin "olleh"
