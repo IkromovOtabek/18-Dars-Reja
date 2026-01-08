@@ -1,13 +1,13 @@
-console.log("Jack Ma maslahatli");
+// console.log("Jack Ma maslahatli");
 
-const list =[
-    "yaxshi talaba bo'ling", //0-20
-    "togri boshliq tanlang va koproq hato qiling", //20-30
-    "uzingizga ishlashingizni boshlang", //30-40
-    "siz kuchli bolgan narslarni qiling", //40-50
-    "yoshlarga investitsiya qiling", //50-60
-    "endi dam oling, foydasi yoq endi", //60
-];
+// const list =[
+//     "yaxshi talaba bo'ling", //0-20
+//     "togri boshliq tanlang va koproq hato qiling", //20-30
+//     "uzingizga ishlashingizni boshlang", //30-40
+//     "siz kuchli bolgan narslarni qiling", //40-50
+//     "yoshlarga investitsiya qiling", //50-60
+//     "endi dam oling, foydasi yoq endi", //60
+// ];
 //CALLBACK FUNCTION
 // function maslahatBering(a, callback){
 //     if (typeof a != "number") callback("insert a number", null);
@@ -173,50 +173,50 @@ const list =[
 // Natija qaytishi kerak: Hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud!
 
 
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
 
-  vaqt() {
-    const now = new Date();
-    const soat = now.getHours();
-    const minut = now.getMinutes().toString().padStart(2, "0");
-    return `${soat}:${minut}`;
-  }
+//   vaqt() {
+//     const now = new Date();
+//     const soat = now.getHours();
+//     const minut = now.getMinutes().toString().padStart(2, "0");
+//     return `${soat}:${minut}`;
+//   }
 
-  qoldiq() {
-    console.log(
-      `Hozir ${this.vaqt()}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`
-    );
-  }
+//   qoldiq() {
+//     console.log(
+//       `Hozir ${this.vaqt()}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`
+//     );
+//   }
 
-  sotish(mahsulot, son) {
-    if (mahsulot === "non") this.non -= son;
-    else if (mahsulot === "lagmon") this.lagmon -= son;
-    else if (mahsulot === "cola") this.cola -= son;
+//   sotish(mahsulot, son) {
+//     if (mahsulot === "non") this.non -= son;
+//     else if (mahsulot === "lagmon") this.lagmon -= son;
+//     else if (mahsulot === "cola") this.cola -= son;
 
-    console.log(`${son}ta ${mahsulot} sotildi`);
-  }
+//     console.log(`${son}ta ${mahsulot} sotildi`);
+//   }
 
-  qabul(mahsulot, son) {
-    if (mahsulot === "non") this.non += son;
-    else if (mahsulot === "lagmon") this.lagmon += son;
-    else if (mahsulot === "cola") this.cola += son;
+//   qabul(mahsulot, son) {
+//     if (mahsulot === "non") this.non += son;
+//     else if (mahsulot === "lagmon") this.lagmon += son;
+//     else if (mahsulot === "cola") this.cola += son;
 
-    console.log(`${son}ta ${mahsulot} qabul qilindi`);
-  }
-}
+//     console.log(`${son}ta ${mahsulot} qabul qilindi`);
+//   }
+// }
 
 // ===== TEST =====
-const shop = new Shop(4, 5, 2);
+// const shop = new Shop(4, 5, 2);
 
-shop.qoldiq();
-shop.sotish("non", 3);
-shop.qabul("cola", 4);
-shop.qoldiq();
+// shop.qoldiq();
+// shop.sotish("non", 3);
+// shop.qabul("cola", 4);
+// shop.qoldiq();
 
 // TASK D
 
@@ -228,26 +228,50 @@ shop.qoldiq();
 // Yuqoridagi misolda birinchi va ikkinchi parametr qiymatli bir xil
 // ya'ni bir xil harflar qatnashganligi uchun true qiymat qaytaradi.
 
-function checkContent(str1, str2) {
-  if (str1.length !== str2.length) {
-    return false;
-  }
-  const sorted1 = str1.split('').sort().join('');
-  const sorted2 = str2.split('').sort().join('');
+// function checkContent(str1, str2) {
+//   if (str1.length !== str2.length) {
+//     return false;
+//   }
+//   const sorted1 = str1.split('').sort().join('');
+//   const sorted2 = str2.split('').sort().join('');
 
-  return sorted1 === sorted2;
-}
+//   return sorted1 === sorted2;
+// }
 
-console.log(checkContent("mitgroup", "gmtiprou"));
-console.log(checkContent("salom dunyo", "slmao uonyd"));
+// console.log(checkContent("mitgroup", "gmtiprou"));
+// console.log(checkContent("salom dunyo", "slmao uonyd"));
 
 // TASK E
 
 // Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 // MASALAN: getReverse("hello") return qilsin "olleh"
 
-function getReverse(str) {
-  return str.split("").reverse().join("");
+// function getReverse(str) {
+//   return str.split("").reverse().join("");
+// }
+
+// console.log(getReverse("hello")); // "olleh"
+
+// TASK F
+
+// Yagona string argumentga ega findDoublers nomli function tuzing
+// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+// true yokida false natija qaytarsin.
+
+// MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+function findDoublers(str) {
+  const a = new Set();
+
+  for (let char of str) {
+    if (a.has(char)) {
+      return true;
+    }
+    a.add(char);
+  }
+
+  return false;
 }
 
-console.log(getReverse("hello")); // "olleh"
+console.log(findDoublers("hello")); 
+console.log(findDoublers("owen")); 
